@@ -3,8 +3,20 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
+<script>
+function sampleRequest(){
+	//window.alert("clicked");
+	 var xmlHttp = new XMLHttpRequest();
+	    xmlHttp.open( "GET", '/menu', false ); // false for synchronous request
+	    xmlHttp.send( null );
+	    return xmlHttp.responseText;
+}
+
+</script>
 </head>
 <body>
-hello caner
+<h1>Welcome Nodejs Client - Server Side Test</h1>
+Click <input type="button" id="like" value="here" onclick="alert(sampleRequest())"> for returning menu json
+
 </body>
 </html>
